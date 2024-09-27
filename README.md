@@ -40,7 +40,7 @@ Assistant:
 
 **For one-shot:** create_multi_shot_prompt() function has only below text that consists of Example 1 from each dynamic router.
 
-''' python
+'''python
 
     examples = """
 
