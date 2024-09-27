@@ -118,5 +118,15 @@ Assistant:
 """
 ```
 
+# Run Server
 
+Firstly, run the server in one terminal.
+
+$ python3 dynamic_router_configuration_1.py
+
+# Test with API Caller
+
+Secodnly API call the server of same configuration
+
+$ python3 curl_caller_configuration_1.py
 
