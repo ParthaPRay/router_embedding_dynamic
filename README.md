@@ -25,17 +25,23 @@ Change the THRESHOLD value for each of the embed model.
 | mxbai-embed-large             | 0.62            |
 
 
+We keep fix the LLM in this whole study as “**qwen2:0.5b-instruct**.
 
-We keep fix the LLM in this whole study as “qwen2:0.5b-instruct”.
+**For zero-shot:** create_multi_shot_prompt() function has only below text:
 
-For zero-shot: create_multi_shot_prompt() function has only below text:
-    examples = """
+''' python
+examples = """
 Now, respond to this query:
 User: """ + prompt + """
 Assistant:
 
 """
-For one-shot: create_multi_shot_prompt() function has only below text that consists of Example 1 from each dynamic router.
+'''
+
+**For one-shot:** create_multi_shot_prompt() function has only below text that consists of Example 1 from each dynamic router.
+
+''' python
+
     examples = """
 
 Example 1:
@@ -43,43 +49,6 @@ Example 1:
 Example 1:
 ….
 Example 1:
-…
-
-Now, respond to this query:
-User: """ + prompt + """
-Assistant:
-
-"""
-
-
-For few-shot: create_multi_shot_prompt() function has only below text that consists of Example 1, Example 2 and Example 3 from each dynamic router.
-    examples = """
-
-Example 1:
-….
-Example 2:
-….
-Example 3:
-…
-Example 1:
-….
-Example 2:
-….
-Example 3:
-…
-
-Example 1:
-….
-Example 2:
-….
-Example 3:
-…
-
-Example 1:
-….
-Example 2:
-….
-Example 3:
 …
 
 Now, respond to this query:
@@ -87,7 +56,46 @@ User: """ + prompt + """
 Assistant:
 
 """
+'''
 
+**For few-shot:** create_multi_shot_prompt() function has only below text that consists of Example 1, Example 2 and Example 3 from each dynamic router.
+
+''' python
+    examples = """
+
+Example 1:
+….
+Example 2:
+….
+Example 3:
+…
+Example 1:
+….
+Example 2:
+….
+Example 3:
+…
+
+Example 1:
+….
+Example 2:
+….
+Example 3:
+…
+
+Example 1:
+….
+Example 2:
+….
+Example 3:
+…
+
+Now, respond to this query:
+User: """ + prompt + """
+Assistant:
+
+"""
+'''
 
 
 
