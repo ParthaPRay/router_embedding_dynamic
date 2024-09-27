@@ -1,0 +1,56 @@
+# Change Directory as below
+
+Set-Location "D:\GenAI SU\Objective 3\Raspberry Pi 4B\dynamic"
+
+
+# Create Conda Virtual Environment
+
+conda create --name droute python=3.9
+
+
+# Actcate Conda Virtual Environment
+
+conda activate droute
+
+
+# Check is curl installed on Windows
+
+curl.exe --version
+
+If not installed then install:
+
+conda install -c anaconda curl
+
+
+
+# Use below to call ollama
+
+
+curl.exe http://localhost:5000/process_prompt `
+ -H "Content-Type: application/json" `
+ -d '{\"prompt\": \"What is x to the power of y?\"}'
+
+or
+
+
+curl -X POST http://localhost:5000/process_prompt \
+-H "Content-Type: application/json" \
+-d '{"prompt": "What is 3 raised to the power of 2?"}'
+
+
+or
+
+
+curl.exe http://localhost:11434/api/embed `
+-d '{\"model\": \"all-minilm:33m\", \"input\": \"The sky is blue because of Rayleigh scattering\"}' `
+-H "Content-Type: application/json"
+
+
+or
+
+Invoke-RestMethod -Uri "http://localhost:11434/api/generate" `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{"model": "qwen2:0.5b-instruct", "prompt": "Why is the sky blue?"}'
+
+
