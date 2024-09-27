@@ -10,10 +10,10 @@ ollama version is 0.3.9
 Figure 1. Test strategy for dynamic routing
 
 Perform the test as shown in Figure 1. By changing the embedding models such as 
-(i)	all-minilm:33m, 
-(ii)	nomic-embed-text, 
-(iii)	snowflake-arctic-embed:110m and 
-(iv)	mxbai-embed-large.
+*	all-minilm:33m,
+*	nomic-embed-text,
+*	snowflake-arctic-embed:110m
+*	mxbai-embed-large.
 
 Change the THRESHOLD value for each of the embed model.
 
