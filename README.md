@@ -4,7 +4,9 @@ This repo contains codes for dynamic routing with multi shot capabilities.
 Dynamic routing test strategy
 ollama version is 0.3.9
 23 September, 2024
- 
+
+ ![image](https://github.com/user-attachments/assets/bbcd375c-dfa6-4277-8623-e8aa7c336d1a)
+
 Figure 1. Test strategy for dynamic routing
 
 Perform the test as shown in Figure 1. By changing the embedding models such as 
@@ -15,7 +17,7 @@ Perform the test as shown in Figure 1. By changing the embedding models such as
 
 Change the THRESHOLD value for each of the embed model.
 
-Embed Model	Threshold Value
+Embed Model	 Threshold Value
 all-minilm:33m	0.4950
 nomic-embed-text	0.63
 snowflake-arctic-embed:110m	0.66
