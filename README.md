@@ -29,18 +29,18 @@ We keep fix the LLM in this whole study as “**qwen2:0.5b-instruct**.
 
 **For zero-shot:** create_multi_shot_prompt() function has only below text:
 
-''' python
+```python
 examples = """
 Now, respond to this query:
 User: """ + prompt + """
 Assistant:
 
 """
-'''
+```
 
 **For one-shot:** create_multi_shot_prompt() function has only below text that consists of Example 1 from each dynamic router.
 
-'''python
+```python
 
     examples = """
 
@@ -56,11 +56,11 @@ User: """ + prompt + """
 Assistant:
 
 """
-'''
+```
 
 **For few-shot:** create_multi_shot_prompt() function has only below text that consists of Example 1, Example 2 and Example 3 from each dynamic router.
 
-''' python
+```python
     examples = """
 
 Example 1:
@@ -95,7 +95,7 @@ User: """ + prompt + """
 Assistant:
 
 """
-'''
+```
 
 
 
